@@ -1,347 +1,281 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev Kumar | Embedded Software Engineer 3</title>
-  <meta name="description" content="Dev Kumar - embedded software engineering, AUTOSAR, Embedded C/C++, MATLAB Simulink, RTOS, CAN/J1939, camera systems, HIL/SIL, ISO 26262, SOTIF, and production machine controls.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <canvas id="machine-canvas" aria-hidden="true"></canvas>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#060b0d">
+    <meta
+      name="description"
+      content="Dev Kumar portfolio for embedded machine controls, Embedded C/C++, MATLAB Simulink, RTOS, CAN J1939 diagnostics, board bring-up, and HIL/SIL validation."
+    >
+    <title>Dev Kumar | Embedded Machine Controls</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <canvas id="control-canvas" aria-hidden="true"></canvas>
 
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="Dev Kumar home">
-      <span class="mark">DK</span>
-      <span>
-        <strong>Dev Kumar</strong>
-        <small>Embedded Software Engineer 3</small>
-      </span>
-    </a>
-    <nav aria-label="Primary navigation">
-      <a href="#experience">Experience</a>
-      <a href="#system">System</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Dev Kumar home">
+        <span class="brand-mark">DK</span>
+        <span class="brand-copy">
+          <strong>Dev Kumar</strong>
+          <span>Embedded Machine Controls</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#controls">Controls</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#research">Research</a>
+      </nav>
+      <div class="header-actions">
+        <a class="icon-button" href="https://github.com/devthedevil" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 .7A11.3 11.3 0 0 0 .7 12c0 5 3.3 9.2 7.8 10.7.6.1.8-.2.8-.6v-2c-3.2.7-3.8-1.3-3.8-1.3-.5-1.2-1.1-1.5-1.1-1.5-.9-.7.1-.7.1-.7 1 .1 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.6-.3-5.3-1.3-5.3-5.6 0-1.2.4-2.3 1.1-3.1-.1-.3-.5-1.5.1-3.1 0 0 .9-.3 3.1 1.2A10.5 10.5 0 0 1 12 6.2c1 0 1.9.1 2.8.4 2.1-1.5 3.1-1.2 3.1-1.2.6 1.6.2 2.8.1 3.1.7.8 1.1 1.8 1.1 3.1 0 4.3-2.7 5.3-5.3 5.6.4.4.8 1.1.8 2.2v3c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/>
+          </svg>
+        </a>
+        <a class="icon-button" href="https://leetcode.com/u/dev_kumar_dklv/" target="_blank" rel="noreferrer" aria-label="LeetCode profile">
+          <span>LC</span>
+        </a>
+      </div>
+    </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">AUTOSAR, Embedded C, C++, MATLAB/Simulink, RTOS, CAN, J1939, camera firmware, HIL/SIL, ISO 26262</p>
-        <h1>Real-time embedded software for autonomous and remote-control machines.</h1>
-        <p class="hero-lede">I build machine software where control-loop timing, sensor diagnostics, safety evidence, operator feedback, and production release discipline all have to hold up outside the lab.</p>
-        <div class="signal-line" aria-live="polite">
-          <span class="signal-dot"></span>
-          <span id="dynamic-signal">AUTOSAR control loops tuned for lower end-to-end latency</span>
+    <main id="top">
+      <section class="hero section">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Embedded Software Engineer 3</p>
+          <h1>Real-time control firmware for tough machines.</h1>
+          <p class="hero-lede">
+            I build embedded control software across Embedded C, C++17, MATLAB/Simulink, RTOS targets, embedded Linux,
+            CAN/J1939, Ethernet diagnostics, board bring-up, and HIL/SIL validation for machine platforms where timing and reliability have to be proven.
+          </p>
+          <div class="rotator" aria-live="polite">
+            <span class="rotator-label">Currently tuning</span>
+            <strong id="rotating-text">control loops that stay stable under real load</strong>
+          </div>
+          <div class="hero-actions">
+            <a class="primary-action" href="#controls">Explore Controls</a>
+            <a class="secondary-action" href="mailto:devkumar.dklv@gmail.com">devkumar.dklv@gmail.com</a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a class="button primary" href="https://github.com/devthedevil" target="_blank" rel="noreferrer">GitHub</a>
-          <a class="button ghost" href="https://leetcode.com/u/dev_kumar_dklv/" target="_blank" rel="noreferrer">LeetCode</a>
+
+        <div class="hero-visual reveal">
+          <img src="assets/embedded-controls-hero.png" alt="Dark embedded controls engineering lab with ECU hardware, off-highway machine telemetry, CAN bus traces, waveforms, and validation panels">
+          <div class="scanline" aria-hidden="true"></div>
+          <div class="floating-chip chip-one">
+            <span>control latency</span>
+            <strong>-35%</strong>
+          </div>
+          <div class="floating-chip chip-two">
+            <span>regression coverage</span>
+            <strong>92%</strong>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="hero-visual reveal">
-        <img src="assets/embedded-autonomy-hero.png" alt="Dark embedded autonomy control system with an industrial machine, ECU boards, camera feeds, CAN bus traces, telemetry, safety validation, and control-loop diagrams">
-        <div class="hero-stack" aria-label="Core embedded systems strengths">
-          <span>AUTOSAR</span>
-          <span>Embedded C</span>
-          <span>C++17</span>
-          <span>RTOS</span>
-          <span>CAN/J1939</span>
-          <span>HIL/SIL</span>
+      <section class="metrics-band section reveal" aria-label="Selected embedded outcomes">
+        <div class="metric-card">
+          <span class="metric-value" data-count="35">0</span>
+          <span class="metric-unit">%</span>
+          <p>end-to-end control latency reduction</p>
         </div>
-      </div>
-    </section>
+        <div class="metric-card">
+          <span class="metric-value" data-count="92">0</span>
+          <span class="metric-unit">%</span>
+          <p>HIL/SIL regression coverage reached</p>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value" data-count="40">0</span>
+          <span class="metric-unit">%</span>
+          <p>faster root cause analysis across control faults</p>
+        </div>
+        <div class="metric-card">
+          <span class="metric-value" data-count="99.99">0</span>
+          <span class="metric-unit">%</span>
+          <p>uptime across production machine lines</p>
+        </div>
+      </section>
 
-    <section class="metrics reveal" aria-label="Selected embedded software impact metrics">
-      <article>
-        <strong><span data-count="7">0</span>+</strong>
-        <span>years designing, integrating, testing, and supporting embedded machine software</span>
-      </article>
-      <article>
-        <strong><span data-count="35">0</span>%</strong>
-        <span>latency reduction through lock-free queues and RTE-optimized scheduling</span>
-      </article>
-      <article>
-        <strong><span data-count="92">0</span>%</strong>
-        <span>regression coverage across simulation, HIL, SIL, safety, and perception scenarios</span>
-      </article>
-      <article>
-        <strong><span data-count="40">0</span>%</strong>
-        <span>faster root-cause analysis of perception, camera, and positioning faults</span>
-      </article>
-    </section>
+      <section id="controls" class="section systems-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Control Stack</p>
+          <h2>From requirements to tested firmware on real machine signals.</h2>
+        </div>
 
-    <section class="craft section-grid reveal" aria-labelledby="craft-title">
-      <div>
-        <p class="eyebrow">Engineering posture</p>
-        <h2 id="craft-title">The best embedded work turns messy physical signals into calm, traceable software behavior.</h2>
-      </div>
-      <div class="craft-copy">
-        <p>I like the part of the work where the requirement, trace log, scope capture, CAN frame, camera stream, and test run finally agree. That is where a machine system starts to feel honest.</p>
-        <p>My default rhythm is simple: understand the hazard and timing budget, design the smallest reliable control path, prove it with tests, then leave behind documentation that makes the next field issue easier to solve.</p>
-      </div>
-    </section>
+        <div class="architecture-grid reveal" aria-label="Embedded machine control architecture diagram">
+          <div class="architecture-node">
+            <span>01</span>
+            <strong>Requirements</strong>
+            <p>Control intent, machine behavior, traceability, FMEA inputs, test plans, and safety constraints.</p>
+          </div>
+          <div class="architecture-node">
+            <span>02</span>
+            <strong>Control Model</strong>
+            <p>MATLAB/Simulink model-based algorithms, state logic, calibration points, and simulation scenarios.</p>
+          </div>
+          <div class="architecture-node">
+            <span>03</span>
+            <strong>Firmware</strong>
+            <p>Embedded C/C++ modules, MISRA-aware structure, lock-free queues, IPC, NVM, and unit tests.</p>
+          </div>
+          <div class="architecture-node">
+            <span>04</span>
+            <strong>RTOS Timing</strong>
+            <p>Task scheduling, real-time control loops, multithreading, sub-millisecond paths, and latency budgets.</p>
+          </div>
+          <div class="architecture-node">
+            <span>05</span>
+            <strong>ECU Integration</strong>
+            <p>Board bring-up, Embedded Linux, device drivers, SPI/I2C sensors, serial links, and actuator feedback.</p>
+          </div>
+          <div class="architecture-node">
+            <span>06</span>
+            <strong>Diagnostics</strong>
+            <p>CAN, SAE J1939, Ethernet, TCP/IP, UDP, CANape sessions, Wireshark traces, and field telemetry.</p>
+          </div>
+          <div class="architecture-node">
+            <span>07</span>
+            <strong>Validation</strong>
+            <p>HIL/SIL regression, integration tests, root cause loops, release readiness, and production monitoring.</p>
+          </div>
+        </div>
 
-    <section id="experience" class="section reveal" aria-labelledby="experience-title">
-      <div class="section-heading">
-        <p class="eyebrow">Experience</p>
-        <h2 id="experience-title">Embedded control, autonomy integration, diagnostics, validation, and production release work</h2>
-      </div>
-      <div class="timeline">
-        <article class="experience-item">
-          <div class="experience-meta">
-            <span>Mar 2025 - Present</span>
-            <strong>Sprouts AI</strong>
-            <em>Software Engineer (Embedded & Autonomy) - Chicago, IL</em>
-          </div>
-          <ul>
-            <li>Designed, developed, integrated, and tested AUTOSAR-based embedded applications in Embedded C and MATLAB/Simulink for next-generation remote control and autonomous control loops on RTOS targets, cutting end-to-end latency by 35% via lock-free queues and RTE-optimized scheduling.</li>
-            <li>Created and maintained software requirements with full traceability to system and customer needs, breaking onboard autonomous system designs into actionable deliverables for global engineering teams across two time zones.</li>
-            <li>Built simulation-driven verification & validation pipelines (Gazebo, CARLA, HIL/SIL) covering ISO 26262, SOTIF, and FMEA scenarios, raising regression coverage to 92% and accelerating root cause analysis of perception, camera, and positioning faults by 40%.</li>
-            <li>Integrated camera systems, Qt-based operator UIs, and CAN/Ethernet diagnostics with CANape and Wireshark, mentoring a 4-engineer team to deliver production-ready Embedded C/C++ modules for industrial remote-control machine releases.</li>
-          </ul>
-        </article>
+        <div class="craft-grid">
+          <article class="craft-card reveal">
+            <span class="craft-icon">01</span>
+            <h3>Chase Timing To The Edge</h3>
+            <p>
+              A control loop is only trustworthy when the schedule, queueing path, driver behavior, and bus timing all match what the machine needs.
+            </p>
+          </article>
+          <article class="craft-card reveal">
+            <span class="craft-icon">02</span>
+            <h3>Prove The Integration</h3>
+            <p>
+              Board bring-up, sensor channels, CAN frames, Ethernet traces, calibration data, and HIL results need to agree before firmware earns a release.
+            </p>
+          </article>
+          <article class="craft-card reveal">
+            <span class="craft-icon">03</span>
+            <h3>Close The Field Loop</h3>
+            <p>
+              The best debugging begins when waveform evidence, trace logs, telemetry, and operator-visible machine response all tell the same story.
+            </p>
+          </article>
+        </div>
+      </section>
 
-        <article class="experience-item">
-          <div class="experience-meta">
-            <span>Aug 2023 - Mar 2025</span>
-            <strong>Resilience Inc</strong>
-            <em>Software Engineer (Embedded) - Chicago, IL</em>
-          </div>
-          <ul>
-            <li>Developed AUTOSAR Classic Platform applications with BSW configuration and RTE interactions in Embedded C and C++17 for a real-time autonomy platform, achieving 15% latency reduction on perception and localization endpoints running under RTOS on embedded Linux targets.</li>
-            <li>Engineered a node graph integrating CAN bus, J1939, Ethernet, and SPI/I2C sensor channels - using CANape and Wireshark for protocol diagnostics - improving telematics throughput by 20% and supporting functional-safety validation gates and MISRA C++ compliance for firmware releases.</li>
-            <li>Authored requirements traces, test plans, and FMEA worksheets driving design-tradeoff reviews with system, hardware, and software teams, streamlining HIL/SIL regression cycles and reducing field-issue tickets by 18% across a 6-engineer release cadence.</li>
-            <li>Built Qt-based operator UIs and camera-system firmware modules feeding remote-control dashboards, integrated with Linux-based development environments, Git toolchains, GDB, and Valgrind for cross-team debugging.</li>
-          </ul>
-        </article>
+      <section id="experience" class="section experience-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Embedded controls delivery across RTOS targets, ECU integration, diagnostics, and validation.</h2>
+        </div>
 
-        <article class="experience-item">
-          <div class="experience-meta">
-            <span>Apr 2018 - Aug 2023</span>
-            <strong>Tata Steel</strong>
-            <em>Software Engineer (Embedded)</em>
-          </div>
-          <ul>
-            <li>Programmed Embedded C and Linux device drivers for heavy-industrial, off-highway, and mobile machine applications - hauling, loading, and conveyor equipment - integrating PLCs and sensor arrays via CAN, J1939, SPI/I2C, and serial protocols on real-time remote-control telematics platforms.</li>
-            <li>Designed and tested camera-system firmware and Qt-based HMI panels for semi-autonomous material-handling equipment, validating CAN/Ethernet traffic with CANape and Wireshark and improving operator visibility by 30%.</li>
-            <li>Led functional-safety V&V cycles with FMEA, board bring-up, NVM qualification, and SPI/I2C peripheral integration on RTOS targets, mentoring a 5-engineer SDLC team and lifting firmware first-pass yield by 22%.</li>
-            <li>Drove root cause analysis and continuous improvement of real-time embedded control loops, tuning multithreaded scheduling and lock-free structures to deliver sub-millisecond response and 99.99% uptime across production lines.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
+        <div class="timeline">
+          <article class="experience-card reveal">
+            <div class="experience-meta">
+              <span>Mar 2025 - Present</span>
+              <h3>Sprouts AI</h3>
+              <p>Software Engineer (Embedded & Controls) - Chicago, IL</p>
+            </div>
+            <ul>
+              <li>Designed, developed, and tested Embedded C and MATLAB/Simulink control software for real-time machine control loops on RTOS targets, cutting end-to-end control latency by 35% through model-based design, optimized scheduling, and lock-free queues.</li>
+              <li>Led hardware/software integration and board bring-up for off-highway machine ECUs, validating CAN/SAE J1939 and Ethernet traffic with CANape and Wireshark to isolate and resolve integration faults before release.</li>
+              <li>Built HIL/SIL verification pipelines covering embedded control scenarios, raising regression coverage to 92% and accelerating root cause analysis of control, sensor, and positioning faults by 40%.</li>
+              <li>Automated test harnesses and diagnostics with Python scripting while mentoring a 4-engineer team to deliver production-ready embedded control modules for industrial machine releases.</li>
+            </ul>
+          </article>
 
-    <section id="system" class="section system-section reveal" aria-labelledby="system-title">
-      <div class="section-heading">
-        <p class="eyebrow">System diagram</p>
-        <h2 id="system-title">How I connect requirements, machine signals, embedded software, and production evidence</h2>
-      </div>
-      <div class="diagram-panel">
-        <svg viewBox="0 0 1100 600" role="img" aria-labelledby="diagram-title diagram-desc">
-          <title id="diagram-title">Embedded autonomy delivery loop</title>
-          <desc id="diagram-desc">A diagram showing requirements traceability through AUTOSAR architecture, sensor buses, real-time control, diagnostics, validation, safety evidence, and production release.</desc>
-          <defs>
-            <linearGradient id="nodeGradient" x1="0%" x2="100%" y1="0%" y2="100%">
-              <stop offset="0%" stop-color="#12252c"></stop>
-              <stop offset="100%" stop-color="#10151d"></stop>
-            </linearGradient>
-            <linearGradient id="edgeGradient" x1="0%" x2="100%" y1="0%" y2="0%">
-              <stop offset="0%" stop-color="#35d9ff"></stop>
-              <stop offset="55%" stop-color="#f7c948"></stop>
-              <stop offset="100%" stop-color="#6df2a5"></stop>
-            </linearGradient>
-            <filter id="glow">
-              <feGaussianBlur stdDeviation="4" result="blur"></feGaussianBlur>
-              <feMerge>
-                <feMergeNode in="blur"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-              </feMerge>
-            </filter>
-          </defs>
+          <article class="experience-card reveal">
+            <div class="experience-meta">
+              <span>Aug 2023 - Mar 2025</span>
+              <h3>Resilience Inc</h3>
+              <p>Software Engineer (Embedded) - Chicago, IL</p>
+            </div>
+            <ul>
+              <li>Developed Embedded C and C++17 control applications for a real-time machine control platform running under RTOS on embedded Linux targets, achieving a 15% latency reduction on control endpoints.</li>
+              <li>Engineered hardware/software integration across CAN bus, SAE J1939, Ethernet, and SPI/I2C sensor channels, using CANape and Wireshark for protocol diagnostics, improving telematics throughput by 20%.</li>
+              <li>Implemented MATLAB/Simulink model-based control algorithms and debugged real-time firmware with GDB and Valgrind, cutting field-issue tickets by 18% across a 6-engineer release cadence.</li>
+              <li>Authored test plans, FMEA worksheets, and HIL/SIL regression cycles driving design-tradeoff reviews with system, hardware, and software teams for MISRA C++ compliant firmware releases.</li>
+            </ul>
+          </article>
 
-          <rect class="diagram-bg" x="0" y="0" width="1100" height="600" rx="24"></rect>
-          <path class="bus-line" d="M150 125 C255 64, 355 88, 450 150 S665 216, 765 130 980 108, 1030 190"></path>
-          <path class="bus-line alt" d="M135 415 C270 500, 390 476, 500 390 S735 270, 865 365 940 480, 1040 420"></path>
-          <path class="bus-line slow" d="M164 300 H938"></path>
+          <article class="experience-card reveal">
+            <div class="experience-meta">
+              <span>Apr 2018 - Aug 2023</span>
+              <h3>Tata Steel</h3>
+              <p>Software Engineer (Embedded)</p>
+            </div>
+            <ul>
+              <li>Programmed Embedded C and Linux device drivers for heavy-industrial, off-highway, and mobile machine applications, integrating engine/machine control units and sensor arrays via CAN, SAE J1939, SPI/I2C, and serial on real-time platforms.</li>
+              <li>Designed and tested embedded control firmware for semi-autonomous material-handling equipment, validating CAN/Ethernet traffic with CANape and Wireshark and improving machine control response by 30%.</li>
+              <li>Led functional-safety V&V cycles with board bring-up, NVM qualification, and SPI/I2C peripheral integration on RTOS targets, mentoring a 5-engineer SDLC team and lifting firmware first-pass yield by 22%.</li>
+              <li>Drove root cause analysis of real-time embedded control loops, tuning multithreaded scheduling and lock-free structures to deliver sub-millisecond response and 99.99% uptime across production machine lines.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
 
-          <g class="node" transform="translate(55 78)">
-            <rect width="185" height="102" rx="16"></rect>
-            <text x="24" y="38">Requirements</text>
-            <text x="24" y="66">Traceability</text>
-          </g>
-          <g class="node" transform="translate(324 96)">
-            <rect width="190" height="116" rx="16"></rect>
-            <text x="24" y="42">AUTOSAR RTE</text>
-            <text x="24" y="72">BSW + SWCs</text>
-          </g>
-          <g class="node hot" transform="translate(592 78)">
-            <rect width="206" height="126" rx="16"></rect>
-            <text x="24" y="44">Embedded C/C++</text>
-            <text x="24" y="76">Control Loops</text>
-          </g>
-          <g class="node" transform="translate(864 105)">
-            <rect width="180" height="104" rx="16"></rect>
-            <text x="24" y="40">RTOS + Linux</text>
-            <text x="24" y="70">Runtime</text>
-          </g>
+      <section id="projects" class="section projects-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Project Graph</p>
+          <h2>Source-backed work across embedded systems, operating systems, AI, backend, cloud, and apps.</h2>
+        </div>
+        <div class="project-toolbar reveal">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="Embedded">Embedded</button>
+          <button class="filter-button" type="button" data-filter="Systems">Systems</button>
+          <button class="filter-button" type="button" data-filter="AI">AI</button>
+          <button class="filter-button" type="button" data-filter="Backend">Backend</button>
+          <button class="filter-button" type="button" data-filter="Apps">Apps</button>
+        </div>
+        <div id="project-grid" class="project-grid" aria-live="polite"></div>
+      </section>
 
-          <g class="node" transform="translate(80 340)">
-            <rect width="196" height="118" rx="16"></rect>
-            <text x="24" y="42">CAN / J1939</text>
-            <text x="24" y="72">Ethernet / SPI</text>
-          </g>
-          <g class="node hot" transform="translate(362 352)">
-            <rect width="220" height="124" rx="16"></rect>
-            <text x="24" y="44">Camera + UI</text>
-            <text x="24" y="76">Operator Feedback</text>
-          </g>
-          <g class="node" transform="translate(654 340)">
-            <rect width="192" height="118" rx="16"></rect>
-            <text x="24" y="42">HIL / SIL</text>
-            <text x="24" y="72">Regression Lab</text>
-          </g>
-          <g class="node" transform="translate(900 330)">
-            <rect width="176" height="128" rx="16"></rect>
-            <text x="24" y="42">Safety Case</text>
-            <text x="24" y="72">FMEA + Release</text>
-          </g>
+      <section id="research" class="section research-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Research & Foundations</p>
+          <h2>Controls-minded engineering grounded in measurement, models, and repeatable validation.</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <h3>IEEE Publication</h3>
+            <p>
+              A comparative study of movie recommendation systems with improved error function, connecting algorithm design, evaluation, and measurable system behavior.
+            </p>
+            <div class="link-row">
+              <a href="https://ieeexplore.ieee.org/document/10094480" target="_blank" rel="noreferrer">Paper</a>
+              <a href="https://github.com/devthedevil/Comparative-Study-of-Movie-Recommendation-System/blob/main/Netflix_Movie.ipynb" target="_blank" rel="noreferrer">Source</a>
+              <a href="https://drive.google.com/file/d/1rayr6Cht6quyLUJOXWOAcBi_rxQp2Ol0/view" target="_blank" rel="noreferrer">Certificate</a>
+            </div>
+          </article>
+          <article class="research-card reveal">
+            <h3>Core Stack</h3>
+            <p>
+              Embedded C, C++20, MATLAB/Simulink, Python, RTOS, Embedded Linux, Linux device drivers, GDB, Valgrind, CAN, SAE J1939, Ethernet, CANape, Wireshark, SPI/I2C, HIL/SIL, FMEA, MISRA C++, ISO 26262, Jenkins, and Docker.
+            </p>
+            <div class="skill-cloud" aria-label="Selected skills">
+              <span>Embedded C</span>
+              <span>C++20</span>
+              <span>RTOS</span>
+              <span>Simulink</span>
+              <span>CAN/J1939</span>
+              <span>HIL/SIL</span>
+              <span>GDB</span>
+              <span>CANape</span>
+              <span>MISRA C++</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
 
-          <g class="pulse-set">
-            <circle r="7" cx="150" cy="125"></circle>
-            <circle r="7" cx="164" cy="300"></circle>
-            <circle r="7" cx="135" cy="415"></circle>
-          </g>
-          <g class="machine-core">
-            <circle cx="550" cy="290" r="78"></circle>
-            <circle cx="550" cy="290" r="45"></circle>
-            <text x="550" y="282" text-anchor="middle">Machine</text>
-            <text x="550" y="312" text-anchor="middle">ECU</text>
-          </g>
-        </svg>
-      </div>
-    </section>
-
-    <section id="projects" class="section reveal" aria-labelledby="projects-title">
-      <div class="section-heading">
-        <p class="eyebrow">Project links</p>
-        <h2 id="projects-title">Systems work across kernel integration, operating systems, data pipelines, AI tooling, mobile apps, and market infrastructure</h2>
-      </div>
-      <div class="project-grid">
-        <article class="project-card featured">
-          <span>Embedded Linux</span>
-          <h3>Linux Character Device Driver</h3>
-          <p>Kernel character device work with module lifecycle, ioctl, proc debugging, and semaphore-based synchronization for low-level integration thinking.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/Character-Device-Driver" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card featured">
-          <span>Operating Systems</span>
-          <h3>EXPOS</h3>
-          <p>Experimental operating system work that shows comfort with process, memory, device, and system-call fundamentals.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/EXPOS" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card featured">
-          <span>Hardware</span>
-          <h3>16-Bit RISC Processor</h3>
-          <p>Processor and hardware lab work connecting digital design concepts with software execution and timing constraints.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/Hardware-lab" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Market Data</span>
-          <h3>CME MDP 3.0 Multicast Feed Handler</h3>
-          <p>Low-latency C++ market-data feed handler with packet parsing and throughput-focused systems engineering.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/CME-Multicast-Market-Data-Feed-Handler-C-" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Streaming Data</span>
-          <h3>Real-time Stock Market Analysis Pipeline</h3>
-          <p>Real-time data ingestion and analytics pipeline for market signals, useful for telemetry-style thinking and observability habits.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/Realtime-Stock-Market-Analysis" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Product Engineering</span>
-          <h3>STRANGERS</h3>
-          <p>Application work demonstrating end-to-end implementation, interaction design, and service delivery.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/Strangers" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Trading Product</span>
-          <h3>TradeSentinel</h3>
-          <p>Market-facing app with production deployment, fast feedback loops, and practical user workflows.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/tradesentinel" target="_blank" rel="noreferrer">Source</a>
-            <a href="https://tradesentinel.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Commerce AI</span>
-          <h3>AskMyStore</h3>
-          <p>AI-assisted store experience with a deployed demo and full-stack implementation detail.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/AskMyStore" target="_blank" rel="noreferrer">Source</a>
-            <a href="https://askmystore.vercel.app/" target="_blank" rel="noreferrer">Demo</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>AI Systems</span>
-          <h3>LangChain Chat with Search</h3>
-          <p>Retrieval and search-augmented AI workflow with practical orchestration and user-facing query behavior.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/LangChain-Chat-with-Search" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>Research</span>
-          <h3>IEEE Movie Recommendation Study</h3>
-          <p>Published recommender-system research with source notebook and certificate link.</p>
-          <div class="project-links">
-            <a href="https://ieeexplore.ieee.org/document/10094480" target="_blank" rel="noreferrer">Paper</a>
-            <a href="https://github.com/devthedevil/Comparative-Study-of-Movie-Recommendation-System/blob/main/Netflix_Movie.ipynb" target="_blank" rel="noreferrer">Source</a>
-            <a href="https://drive.google.com/file/d/1rayr6Cht6quyLUJOXWOAcBi_rxQp2Ol0/view" target="_blank" rel="noreferrer">Certificate</a>
-          </div>
-        </article>
-        <article class="project-card">
-          <span>iOS</span>
-          <h3>Pitch Perfect</h3>
-          <p>iOS app work showing mobile implementation, audio workflows, and polished application delivery.</p>
-          <div class="project-links">
-            <a href="https://github.com/devthedevil/Pitch_Perfect" target="_blank" rel="noreferrer">Source</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact-section reveal" aria-labelledby="contact-title">
-      <div>
-        <p class="eyebrow">Contact</p>
-        <h2 id="contact-title">Ready to build embedded systems that behave predictably in the field.</h2>
-      </div>
-      <div class="contact-actions">
-        <a class="button primary" href="mailto:devkumar.dklv@gmail.com">Email</a>
-        <a class="button ghost" href="https://github.com/devthedevil" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="button ghost" href="https://leetcode.com/u/dev_kumar_dklv/" target="_blank" rel="noreferrer">LeetCode</a>
-      </div>
-    </section>
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

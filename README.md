@@ -1,17 +1,18 @@
-# Dev Kumar - Embedded Software Engineer 3 Site
+# Dev Kumar - Caterpillar Embedded Software Engineer 3 Portfolio
 
-Dark, role-aligned static website for Dev Kumar's embedded software resume.
+Dark, animated single-page portfolio tailored for embedded software engineering in real-time machine controls, Embedded C/C++, MATLAB/Simulink model-based design, RTOS timing, CAN/J1939 diagnostics, board bring-up, and HIL/SIL validation.
+
+## Live Site
+
+- Demo: https://dsp25scm14k.github.io/_dev_Caterpillar_EmbeddedSoftwareEngineer3/
+- Source: https://github.com/DSP25SCM14K/_dev_Caterpillar_EmbeddedSoftwareEngineer3
 
 ## Highlights
 
-- Generated industrial embedded/autonomy hero image
-- Animated canvas telemetry background
-- Dynamic typewriter signal line
-- Embedded autonomy delivery diagram
-- Full resume experience bullets
-- Project source and demo links
-- GitHub Pages ready
-
-## Deployment
-
-This site is static and can be served directly from the repository root through GitHub Pages.
+- Generated embedded controls hero image.
+- Canvas animation for live bus and telemetry motion.
+- Dynamic role text and animated outcome metrics.
+- Architecture diagram for requirements, model-based design, firmware, RTOS scheduling, ECU integration, diagnostics, and HIL/SIL regression.
+- Complete experience section with all resume bullets.
+- Project cards with source and demo links where provided.
+- GitHub Pages workflow for static deployment.
